@@ -35,7 +35,7 @@ def friendship_add_friend(request, to_username, template_name='friendship/friend
         try:
             Friend.objects.add_friend(from_user, to_user)
         except AlreadyExistsError as e:
-            ctx['errors'] = ["%s" % e]
+            ctx['errors'] = e.messages
         else:
             return redirect('friendship_request_list')
 
@@ -134,7 +134,7 @@ def follower_add(request, followee_username, template_name='friendship/follow/ad
         try:
             Follow.objects.add_follower(follower, followee)
         except AlreadyExistsError as e:
-            ctx['errors'] = ["%s" % e]
+            ctx['errors'] = e.messages
         else:
             return redirect('friendship_following', username=follower.username)
 

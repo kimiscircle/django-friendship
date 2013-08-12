@@ -130,8 +130,8 @@ class FriendshipModelTests(BaseTestCase):
         self.assertEqual(Friend.objects.friends(self.user_amy), [])
         req3.reject()
 
-        # Duplicated requests raise a more specific subclass of IntegrityError.
-        with self.assertRaises(IntegrityError):
+        # Duplicated requests raise a more specific subclass of ValidationError.
+        with self.assertRaises(ValidationError):
             Friend.objects.add_friend(self.user_susan, self.user_amy)
         with self.assertRaises(AlreadyExistsError):
             Friend.objects.add_friend(self.user_susan, self.user_amy)
@@ -198,8 +198,8 @@ class FriendshipModelTests(BaseTestCase):
         self.assertTrue(Follow.objects.follows(self.user_bob, self.user_steve))
         self.assertFalse(Follow.objects.follows(self.user_steve, self.user_bob))
 
-        # Duplicated requests raise a more specific subclass of IntegrityError.
-        with self.assertRaises(IntegrityError):
+        # Duplicated requests raise a more specific subclass of ValidationError.
+        with self.assertRaises(ValidationError):
             Follow.objects.add_follower(self.user_bob, self.user_steve)
         with self.assertRaises(AlreadyExistsError):
             Follow.objects.add_follower(self.user_bob, self.user_steve)
@@ -283,10 +283,10 @@ class FriendshipViewTests(BaseTestCase):
             redirect_url = reverse('friendship_request_list')
             self.assertTrue(redirect_url in response['Location'])
 
+
             response = self.client.post(url)
             self.assertResponse200(response)
             self.assertTrue('errors' in response.context)
-            self.assertEqual(response.context['errors'], ['Friendship already requested'])
 
     def test_friendship_requests(self):
         url = reverse('friendship_request_list')
