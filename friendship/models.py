@@ -13,8 +13,8 @@ from friendship.exceptions import AlreadyExistsError
 from friendship.signals import friendship_request_created, \
     friendship_request_rejected, friendship_request_canceled, \
     friendship_request_viewed, friendship_request_accepted, \
-    friendship_removed, follower_created, following_created, follower_removed,\
-    following_removed,friendship_request_preaccepted,
+    friendship_removed, follower_created, following_created, follower_removed, \
+    following_removed, friendship_request_preaccepted
 
 AUTH_USER_MODEL = getattr(settings, 'AUTH_USER_MODEL', 'auth.User')
 
@@ -93,15 +93,17 @@ class FriendshipRequest(models.Model):
             to_user=self.to_user
         )
 
-        relation1 = Friend.objects.create(
-            from_user=self.from_user,
-            to_user=self.to_user
-        )
+        if self.from_user.pk < self.to_user.pk:
+            relation = Friend.objects.create(
+                from_user=self.from_user,
+                to_user=self.to_user
+            )
+        else:
+            relation = Friend.objects.create(
+                from_user=self.to_user,
+                to_user=self.from_user
+            )
 
-        relation2 = Friend.objects.create(
-            from_user=self.to_user,
-            to_user=self.from_user
-        )
 
         self.delete()
 
@@ -161,8 +163,8 @@ class FriendshipManager(models.Manager):
         friends = cache.get(key)
 
         if friends is None:
-            qs = Friend.objects.select_related('from_user', 'to_user').filter(to_user=user).all()
-            friends = [u.from_user for u in qs]
+            qs = Friend.objects.select_related('from_user', 'to_user').filter(Q(to_user=user) | Q(from_user=user)).all()
+            friends = [u.from_user if user == u.to_user else u.to_user for u in qs]
             cache.set(key, friends)
 
         return friends
@@ -301,10 +303,10 @@ class FriendshipManager(models.Manager):
     def remove_friend(self, to_user, from_user):
         """ Destroy a friendship relationship """
         try:
-            qs = Friend.objects.filter(
-                Q(to_user=to_user, from_user=from_user) |
-                Q(to_user=from_user, from_user=to_user)
-            ).distinct().all()
+            if from_user.pk < to_user.pk:
+                qs = Friend.objects.filter(to_user=to_user, from_user=from_user).distinct().all()
+            else:
+                qs = Friend.objects.filter(to_user=from_user, from_user=to_user).distinct().all()
 
             if qs:
                 friendship_removed.send(
@@ -323,6 +325,7 @@ class FriendshipManager(models.Manager):
 
     def are_friends(self, user1, user2):
         """ Are these two users friends? """
+
         friends1 = cache.get(cache_key('friends', user1.pk))
         friends2 = cache.get(cache_key('friends', user2.pk))
         if friends1 and user2 in friends1:
@@ -331,7 +334,10 @@ class FriendshipManager(models.Manager):
             return True
         else:
             try:
-                Friend.objects.get(to_user=user1, from_user=user2)
+                if user1.pk < user2.pk:
+                    Friend.objects.get(to_user=user2, from_user=user1)
+                else:
+                    Friend.objects.get(to_user=user1, from_user=user2)
                 return True
             except Friend.DoesNotExist:
                 return False
@@ -358,6 +364,8 @@ class Friend(models.Model):
         # Ensure users can't be friends with themselves
         if self.to_user == self.from_user:
             raise ValidationError("Users cannot be friends with themselves.")
+        if self.from_user.pk > self.to_user.pk:
+            raise ValidationError("Internal friends save must be pk increasing.")
         super(Friend, self).save(*args, **kwargs)
 
 
