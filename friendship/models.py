@@ -110,6 +110,18 @@ class FriendshipRequest(models.Model):
             to_user=self.from_user
         ).delete()
 
+        friendship_request_accepted.send(
+            sender=self,
+            from_user=self.from_user,
+            to_user=self.to_user
+        )
+
+        return True
+
+    def save(self, *args, **kwargs):
+        if self.pk is None or self.pk == u'0':
+            send=True
+        super(FriendshipRequest,self).save(*args, **kwargs)
         # Bust requests cache - request is deleted
         bust_cache('requests', self.to_user.pk)
         bust_cache('sent_requests', self.from_user.pk)
@@ -119,14 +131,16 @@ class FriendshipRequest(models.Model):
         # Bust friends cache - new friends added
         bust_cache('friends', self.to_user.pk)
         bust_cache('friends', self.from_user.pk)
+        if send:
+            print(self.pk)
+            friendship_request_created.send(sender=self)
 
-        friendship_request_accepted.send(
-            sender=self,
-            from_user=self.from_user,
-            to_user=self.to_user
-        )
+    def delete(self, using=None):
+        super(FriendshipRequest,self).delete(using=using)
+        bust_cache('requests', self.to_user.pk)
+        bust_cache('sent_requests', self.from_user.pk)
+        friendship_request_canceled.send(sender=self)
 
-        return True
 
     def reject(self):
         """ reject this friendship request """
@@ -138,9 +152,6 @@ class FriendshipRequest(models.Model):
     def cancel(self):
         """ cancel this friendship request """
         self.delete()
-        friendship_request_canceled.send(sender=self)
-        bust_cache('requests', self.to_user.pk)
-        bust_cache('sent_requests', self.from_user.pk)
         return True
 
     def mark_viewed(self):
@@ -159,7 +170,7 @@ class FriendshipManager(models.Manager):
         key = cache_key('friends', user.pk)
         friends = cache.get(key)
 
-        if friends is None or len(friends) == 0:
+        if friends is None:
             qs = Friend.objects.select_related('from_user', 'to_user').filter(Q(to_user=user) | Q(from_user=user)).all()
             friends = [u.from_user if user == u.to_user else u.to_user for u in qs]
             cache.set(key, friends)
@@ -171,7 +182,7 @@ class FriendshipManager(models.Manager):
         key = cache_key('requests', user.pk)
         requests = cache.get(key)
 
-        if requests is None or len(requests) == 0:
+        if requests is None:
             qs = FriendshipRequest.objects.select_related('from_user', 'to_user').filter(
                 to_user=user).all()
             requests = list(qs)
@@ -184,7 +195,7 @@ class FriendshipManager(models.Manager):
         key = cache_key('sent_requests', user.pk)
         requests = cache.get(key)
 
-        if requests is None or len(requests) == 0:
+        if requests is None:
             qs = FriendshipRequest.objects.select_related('from_user', 'to_user').filter(
                 from_user=user).all()
             requests = list(qs)
@@ -197,7 +208,7 @@ class FriendshipManager(models.Manager):
         key = cache_key('unread_requests', user.pk)
         unread_requests = cache.get(key)
 
-        if unread_requests is None or len(unread_requests) == 0:
+        if unread_requests is None:
             qs = FriendshipRequest.objects.select_related('from_user', 'to_user').filter(
                 to_user=user,
                 viewed__isnull=True).all()
@@ -224,7 +235,7 @@ class FriendshipManager(models.Manager):
         key = cache_key('read_requests', user.pk)
         read_requests = cache.get(key)
 
-        if read_requests is None or len(read_requests) == 0:
+        if read_requests is None:
             qs = FriendshipRequest.objects.select_related('from_user', 'to_user').filter(
                 to_user=user,
                 viewed__isnull=False).all()
@@ -238,7 +249,7 @@ class FriendshipManager(models.Manager):
         key = cache_key('rejected_requests', user.pk)
         rejected_requests = cache.get(key)
 
-        if rejected_requests is None or len(rejected_requests) == 0:
+        if rejected_requests is None:
             qs = FriendshipRequest.objects.select_related('from_user', 'to_user').filter(
                 to_user=user,
                 rejected__isnull=False).all()
@@ -252,7 +263,7 @@ class FriendshipManager(models.Manager):
         key = cache_key('unrejected_requests', user.pk)
         unrejected_requests = cache.get(key)
 
-        if unrejected_requests is None or len(unrejected_requests):
+        if unrejected_requests is None:
             qs = FriendshipRequest.objects.select_related('from_user', 'to_user').filter(
                 to_user=user,
                 rejected__isnull=True).all()
@@ -291,8 +302,6 @@ class FriendshipManager(models.Manager):
         if created is False:
             raise AlreadyExistsError("Friendship already requested")
 
-        bust_cache('requests', to_user.pk)
-        bust_cache('sent_requests', from_user.pk)
         friendship_request_created.send(sender=request)
 
         return request
@@ -363,6 +372,16 @@ class Friend(models.Model):
         if self.from_user.pk > self.to_user.pk:
             raise ValidationError("Internal friends save must be pk increasing.")
         super(Friend, self).save(*args, **kwargs)
+        # Bust friends cache - new friends added
+        bust_cache('friends', self.to_user.pk)
+        bust_cache('friends', self.from_user.pk)
+
+    def delete(self, using=None):
+        super(Friend, self).delete(using=using)
+        # Bust requests cache - request is deleted
+        # Bust friends cache - new friends added
+        bust_cache('friends', self.to_user.pk)
+        bust_cache('friends', self.from_user.pk)
 
 
 class FollowingManager(models.Manager):
@@ -373,7 +392,7 @@ class FollowingManager(models.Manager):
         key = cache_key('followers', user.pk)
         followers = cache.get(key)
 
-        if followers is None or len(followers) == 0:
+        if followers is None:
             qs = Follow.objects.filter(followee=user).all()
             followers = [u.follower for u in qs]
             cache.set(key, followers)
@@ -385,7 +404,7 @@ class FollowingManager(models.Manager):
         key = cache_key('following', user.pk)
         following = cache.get(key)
 
-        if following is None or len(following) == 0:
+        if following is None:
             qs = Follow.objects.filter(follower=user).all()
             following = [u.followee for u in qs]
             cache.set(key, following)
@@ -417,8 +436,6 @@ class FollowingManager(models.Manager):
             follower_removed.send(sender=rel, follower=rel.follower)
             following_removed.send(sender=rel, following=rel.followee)
             rel.delete()
-            bust_cache('followers', followee.pk)
-            bust_cache('following', follower.pk)
             return True
         except Follow.DoesNotExist:
             return False
@@ -461,3 +478,10 @@ class Follow(models.Model):
         if self.follower == self.followee:
             raise ValidationError("Users cannot follow themselves.")
         super(Follow, self).save(*args, **kwargs)
+        bust_cache('followers', followee.pk)
+        bust_cache('following', follower.pk)
+
+    def delete(self, using=None):
+        super(Follow, self).delete(using=using)
+        bust_cache('followers', followee.pk)
+        bust_cache('following', follower.pk)
