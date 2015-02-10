@@ -11,13 +11,13 @@ else:
     User = get_user_model()
 
 user_orm_label = '%s.%s' % (User._meta.app_label, User._meta.object_name)
-user_model_label = '%s.%s' % (User._meta.app_label, User._meta.module_name)
+user_model_label = '%s.%s' % (User._meta.app_label, User._meta.model_name)
 
 
 class Migration(SchemaMigration):
 
     def forwards(self, orm):
-        
+
         # Adding model 'FriendshipRequest'
         db.create_table('friendship_friendshiprequest', (
             ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
@@ -58,7 +58,7 @@ class Migration(SchemaMigration):
         db.create_unique('friendship_follow', ['follower_id', 'followee_id'])
 
     def backwards(self, orm):
-        
+
         # Removing unique constraint on 'Follow', fields ['follower', 'followee']
         db.delete_unique('friendship_follow', ['follower_id', 'followee_id'])
 
