@@ -12,7 +12,7 @@ from friendship.signals import friendship_request_created, \
     friendship_request_rejected, friendship_request_canceled, \
     friendship_request_viewed, friendship_request_accepted, \
     friendship_removed, follower_created, following_created, follower_removed,\
-    following_removed
+    following_removed,friendship_request_preaccepted,
 
 AUTH_USER_MODEL = getattr(settings, 'AUTH_USER_MODEL', 'auth.User')
 
@@ -84,6 +84,12 @@ class FriendshipRequest(models.Model):
 
     def accept(self):
         """ Accept this friendship request """
+        friendship_request_preaccepted.send(
+            sender=self,
+            from_user=self.from_user,
+            to_user=self.to_user
+        )
+
         relation1 = Friend.objects.create(
             from_user=self.from_user,
             to_user=self.to_user
@@ -92,12 +98,6 @@ class FriendshipRequest(models.Model):
         relation2 = Friend.objects.create(
             from_user=self.to_user,
             to_user=self.from_user
-        )
-
-        friendship_request_accepted.send(
-            sender=self,
-            from_user=self.from_user,
-            to_user=self.to_user
         )
 
         self.delete()
@@ -117,6 +117,12 @@ class FriendshipRequest(models.Model):
         # Bust friends cache - new friends added
         bust_cache('friends', self.to_user.pk)
         bust_cache('friends', self.from_user.pk)
+
+        friendship_request_accepted.send(
+            sender=self,
+            from_user=self.from_user,
+            to_user=self.to_user
+        )
 
         return True
 
