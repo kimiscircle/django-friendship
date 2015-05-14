@@ -1,5 +1,4 @@
-from urllib import urlencode
-
+from urllib.parse import urlencode
 from django.contrib import messages
 from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect
@@ -10,9 +9,9 @@ from django.contrib.auth.decorators import login_required
 
 from gdata.contacts.service import ContactsService
 
-from friends.contrib.suggestions.backends.importers import GoogleImporter, FacebookImporter, TwitterImporter, YahooImporter, LinkedInImporter
-from friends.contrib.suggestions.settings import RUNNER
-from friends.contrib.suggestions.models import FriendshipSuggestion
+from friendship.contrib.suggestions.backends.importers import GoogleImporter, FacebookImporter, TwitterImporter, YahooImporter, LinkedInImporter
+from friendship.contrib.suggestions.settings import RUNNER
+from friendship.contrib.suggestions.models import FriendshipSuggestion
 
 
 @login_required

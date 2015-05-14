@@ -1,6 +1,4 @@
-from friends.contrib.suggestions.backends.persistance import ModelPersistance
-
-
+from friendship.contrib.suggestions.backends.persistance import ModelPersistance
 
 class BaseRunner(object):
     def __init__(self, importer, persistance=ModelPersistance, **credentials):
@@ -24,13 +22,11 @@ class SynchronousResult(object):
     def ready(self):
         return True
 
-
 class SynchronousRunner(BaseRunner):
     def import_contacts(self):
         return SynchronousResult(
             self.importer().run(self.credentials, self.persistance())
         )
-
 
 class AsyncRunner(BaseRunner):
     def import_contacts(self):

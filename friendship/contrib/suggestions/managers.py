@@ -4,7 +4,6 @@ from django.contrib.auth.models import User
 
 
 class FriendshipSuggestionManager(models.Manager):
-
     def suggested_friends_for_user(self, user):
         suggested_friends = []
         qs = self.filter(Q(from_user=user) | Q(to_user=user)).select_related(depth=1)
@@ -32,8 +31,8 @@ class FriendshipSuggestionManager(models.Manager):
         """
         Creates friendship suggestions using contacts imported by user.
         """
-        from friends.contrib.suggestions.models import ImportedContact
-        from friends.models import Friendship
+        from friendship.contrib.suggestions.models import ImportedContact
+        from friendship.models import Friend
 
         created = 0
         imported_contacts = ImportedContact.objects.filter(owner=user)
@@ -54,18 +53,17 @@ class FriendshipSuggestionManager(models.Manager):
                     pass
             for suggested_friend in suggested_friends:
                 if suggested_friend != user \
-                and not Friendship.objects.are_friends(user, suggested_friend) \
-                and not self.are_suggested_friends(user, suggested_friend):
+                        and not Friend.objects.are_friends(user, suggested_friend) \
+                        and not self.are_suggested_friends(user, suggested_friend):
                     self.create(from_user=user, to_user=suggested_friend)
                     created += 1
         # we can also search other imported contacts using this user data
-        imported_contacts = ImportedContact.objects.select_related('owner').filter(Q(email=user.email) | Q(name=user.first_name + ' ' + user.last_name))
+        imported_contacts = ImportedContact.objects.select_related('owner').filter(
+            Q(email=user.email) | Q(name=user.first_name + ' ' + user.last_name))
         for imported_contact in imported_contacts:
             if imported_contact.owner != user \
-            and not Friendship.objects.are_friends(user, imported_contact.owner) \
-            and not self.are_suggested_friends(user, imported_contact.owner):
+                    and not Friend.objects.are_friends(user, imported_contact.owner) \
+                    and not self.are_suggested_friends(user, imported_contact.owner):
                 self.create(from_user=imported_contact.owner, to_user=user)
                 created += 1
         return created
-
-

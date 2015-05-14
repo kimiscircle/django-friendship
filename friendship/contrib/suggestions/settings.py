@@ -18,7 +18,7 @@ def map_to_attr(setting, default=None):
     module, attr = path[:i], path[i + 1:]
     try:
         mod = import_module(module)
-    except ImportError, e:
+    except ImportError as e:
         raise ImproperlyConfigured("Error importing %s: '%s'" % (module, e))
     try:
         attr = getattr(mod, attr)
@@ -29,5 +29,5 @@ def map_to_attr(setting, default=None):
 
 RUNNER = map_to_attr(
     "FRIENDS_SUGGESTIONS_IMPORT_RUNNER",
-    "friends.contrib.suggestions.backends.runners.SynchronousRunner"
+    "friendship.contrib.suggestions.backends.runners.SynchronousRunner"
 )

@@ -1,10 +1,7 @@
 import warnings
 
-from friends.contrib.suggestions.models import ImportedContact
-
-
+from friendship.contrib.suggestions.models import ImportedContact
 warnings.filterwarnings('ignore', message="^Data truncated for column.*$")
-
 
 class BasePersistance(object):
     def persist(self, contact, status, credentials):

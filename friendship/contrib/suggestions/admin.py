@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from friends.contrib.suggestions.models import FriendshipSuggestion, ImportedContact
+from friendship.contrib.suggestions.models import FriendshipSuggestion, ImportedContact
 
 
 class FriendshipSuggestionAdmin(admin.ModelAdmin):

@@ -1,4 +1,10 @@
+south
+celery
 Django>=1.4
+facebook
+twitter
+requests_oauthlib
+git+https://github.com/kimiscircle/gdata.git
 coverage==3.7.1
 django-coverage==1.2.4
 #wsgiref==0.1.2
