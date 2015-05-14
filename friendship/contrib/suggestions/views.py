@@ -15,7 +15,7 @@ from friendship.contrib.suggestions.models import FriendshipSuggestion
 
 
 @login_required
-def suggested_friends(request, template_name="friends/suggestions/suggested_friends.html"):
+def suggested_friends(request, template_name="friendship/suggestions/suggested_friends.html"):
     """
     List suggested friends.
     """
@@ -44,7 +44,7 @@ def _import_status(request, results):
 
 @login_required
 def import_contacts(request,
-                    template_name="friends/suggestions/import_contacts.html",
+                    template_name="friendship/suggestions/import_contacts.html",
                     extra_context=None):
     """
     If there is import_contacts_task_id in session pop it up and show info about

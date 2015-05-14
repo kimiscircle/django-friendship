@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c2f7fb7-bb6d-4dcd-981b-7908d30a8bc0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/friendship/contrib/suggestions/backends/importers.py" afterPath="$PROJECT_DIR$/friendship/contrib/suggestions/backends/importers.py" />
+    <list default="true" id="2c2f7fb7-bb6d-4dcd-981b-7908d30a8bc0" name="Default" comment="update deps">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/friendship/contrib/suggestions/models.py" afterPath="$PROJECT_DIR$/friendship/contrib/suggestions/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/friendship/contrib/suggestions/settings.py" afterPath="$PROJECT_DIR$/friendship/contrib/suggestions/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/friendship/contrib/suggestions/urls.py" afterPath="$PROJECT_DIR$/friendship/contrib/suggestions/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="django-friendship.iws" />
@@ -24,59 +23,96 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="DatabaseView">
+    <option name="FLATTEN" value="false" />
+    <option name="GROUP_BY_TYPE" value="true" />
+    <option name="SORT_CHILDREN" value="false" />
+    <option name="SHOW_TABLE_CONSTRAINTS" value="true" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="django-friendship" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="importers.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/friendship/contrib/suggestions/backends/importers.py">
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/friendship/contrib/suggestions/admin.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="73" column="22" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="22" />
+              <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#0#32#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/friendship/contrib/suggestions/urls.py">
+      <file leaf-file-name="persistance.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/friendship/contrib/suggestions/backends/persistance.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+              <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/friendship/contrib/suggestions/views.py">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/friendship/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-              <folding />
+              <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+              <folding>
+                <element signature="e#1600#1712#0" expanded="false" />
+                <element signature="e#1600#1673#1" expanded="false" />
+                <element signature="e#1750#1942#0" expanded="false" />
+                <element signature="e#1750#1823#1" expanded="false" />
+                <element signature="e#2507#2651#0" expanded="false" />
+                <element signature="e#2684#2765#0" expanded="false" />
+                <element signature="e#2797#3691#0" expanded="false" />
+                <element signature="e#3738#4437#0" expanded="false" />
+                <element signature="e#4481#4688#0" expanded="false" />
+                <element signature="e#4721#4920#0" expanded="false" />
+                <element signature="e#4952#5032#0" expanded="false" />
+                <element signature="e#5069#5237#0" expanded="false" />
+                <element signature="e#5285#11670#0" expanded="false" />
+                <element signature="e#5350#5757#0" expanded="false" />
+                <element signature="e#5797#6170#0" expanded="false" />
+                <element signature="e#6215#6605#0" expanded="false" />
+                <element signature="e#6652#7111#0" expanded="false" />
+                <element signature="e#7163#7554#0" expanded="false" />
+                <element signature="e#7599#8045#0" expanded="false" />
+                <element signature="e#8094#8570#0" expanded="false" />
+                <element signature="e#8621#9102#0" expanded="false" />
+                <element signature="e#9158#9559#0" expanded="false" />
+                <element signature="e#9629#10167#0" expanded="false" />
+                <element signature="e#10226#10992#0" expanded="false" />
+                <element signature="e#11043#11670#0" expanded="false" />
+                <element signature="e#12054#12174#0" expanded="false" />
+                <element signature="e#12207#12283#0" expanded="false" />
+                <element signature="e#12330#12823#0" expanded="false" />
+                <element signature="e#12867#13102#0" expanded="false" />
+                <element signature="e#13149#15656#0" expanded="false" />
+                <element signature="e#13215#13538#0" expanded="false" />
+                <element signature="e#13579#13921#0" expanded="false" />
+                <element signature="e#13979#14597#0" expanded="false" />
+                <element signature="e#14658#15053#0" expanded="false" />
+                <element signature="e#15106#15656#0" expanded="false" />
+                <element signature="e#15720#16811#0" expanded="false" />
+                <element signature="e#16039#16191#0" expanded="false" />
+                <element signature="e#16224#16292#0" expanded="false" />
+                <element signature="e#16339#16638#0" expanded="false" />
+                <element signature="e#16682#16811#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/friendship/contrib/suggestions/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/friendship/contrib/suggestions/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5151515">
-              <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.53511703">
+              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -97,19 +133,20 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/friendship/contrib/suggestions/views.py" />
-        <option value="$PROJECT_DIR$/friendship/contrib/suggestions/admin.py" />
         <option value="$PROJECT_DIR$/friendship/contrib/suggestions/migrations/0001_initial.py" />
         <option value="$PROJECT_DIR$/friendship/contrib/suggestions/backends/persistance.py" />
         <option value="$PROJECT_DIR$/friendship/contrib/suggestions/backends/runners.py" />
         <option value="$PROJECT_DIR$/friendship/contrib/suggestions/managers.py" />
-        <option value="$PROJECT_DIR$/friendship/contrib/suggestions/models.py" />
         <option value="$PROJECT_DIR$/friendship/contrib/suggestions/tasks.py" />
         <option value="/usr/lib/python3.4/site-packages/oauth_access/access.py" />
         <option value="$PROJECT_DIR$/friendship/contrib/suggestions/backends/importers.py" />
         <option value="$PROJECT_DIR$/friendship/contrib/suggestions/urls.py" />
-        <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/friendship/contrib/suggestions/settings.py" />
+        <option value="$PROJECT_DIR$/friendship/contrib/suggestions/views.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/friendship/contrib/suggestions/admin.py" />
+        <option value="$PROJECT_DIR$/friendship/contrib/suggestions/models.py" />
       </list>
     </option>
   </component>
@@ -124,6 +161,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
+  </component>
   <component name="NamedScopeManager">
     <order />
   </component>
@@ -132,10 +172,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-2" />
-    <option name="y" value="24" />
-    <option name="width" value="1370" />
-    <option name="height" value="748" />
+    <option name="y" value="27" />
+    <option name="width" value="1364" />
+    <option name="height" value="741" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -160,9 +199,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -237,6 +273,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -773,15 +812,17 @@
       <updated>1431567948083</updated>
       <workItem from="1431567951753" duration="7000" />
       <workItem from="1431567998301" duration="8981000" />
-      <workItem from="1431644522498" duration="2830000" />
+      <workItem from="1431644522498" duration="5772000" />
+      <workItem from="1431673644732" duration="1136000" />
+      <workItem from="1431821605471" duration="2686000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11818000" />
+    <option name="totallyTimeSpent" value="18582000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="24" width="1370" height="748" extended-state="6" />
+    <frame x="0" y="27" width="1364" height="741" extended-state="4" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -789,18 +830,17 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32857144" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32857144" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296" sideWeight="0.5030349" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32857144" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.244713" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24279211" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="BrainLeg" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -808,6 +848,8 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32857144" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296" sideWeight="0.4969651" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -823,11 +865,175 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update deps" />
+    <option name="LAST_COMMIT_MESSAGE" value="update deps" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/friendship/contrib/suggestions/backends/persistance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/friendship/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+          <folding>
+            <element signature="e#1600#1712#0" expanded="false" />
+            <element signature="e#1600#1673#1" expanded="false" />
+            <element signature="e#1750#1942#0" expanded="false" />
+            <element signature="e#1750#1823#1" expanded="false" />
+            <element signature="e#2507#2651#0" expanded="false" />
+            <element signature="e#2684#2765#0" expanded="false" />
+            <element signature="e#2797#3691#0" expanded="false" />
+            <element signature="e#3738#4437#0" expanded="false" />
+            <element signature="e#4481#4688#0" expanded="false" />
+            <element signature="e#4721#4920#0" expanded="false" />
+            <element signature="e#4952#5032#0" expanded="false" />
+            <element signature="e#5069#5237#0" expanded="false" />
+            <element signature="e#5285#11670#0" expanded="false" />
+            <element signature="e#5350#5757#0" expanded="false" />
+            <element signature="e#5797#6170#0" expanded="false" />
+            <element signature="e#6215#6605#0" expanded="false" />
+            <element signature="e#6652#7111#0" expanded="false" />
+            <element signature="e#7163#7554#0" expanded="false" />
+            <element signature="e#7599#8045#0" expanded="false" />
+            <element signature="e#8094#8570#0" expanded="false" />
+            <element signature="e#8621#9102#0" expanded="false" />
+            <element signature="e#9158#9559#0" expanded="false" />
+            <element signature="e#9629#10167#0" expanded="false" />
+            <element signature="e#10226#10992#0" expanded="false" />
+            <element signature="e#11043#11670#0" expanded="false" />
+            <element signature="e#12054#12174#0" expanded="false" />
+            <element signature="e#12207#12283#0" expanded="false" />
+            <element signature="e#12330#12823#0" expanded="false" />
+            <element signature="e#12867#13102#0" expanded="false" />
+            <element signature="e#13149#15656#0" expanded="false" />
+            <element signature="e#13215#13538#0" expanded="false" />
+            <element signature="e#13579#13921#0" expanded="false" />
+            <element signature="e#13979#14597#0" expanded="false" />
+            <element signature="e#14658#15053#0" expanded="false" />
+            <element signature="e#15106#15656#0" expanded="false" />
+            <element signature="e#15720#16811#0" expanded="false" />
+            <element signature="e#16039#16191#0" expanded="false" />
+            <element signature="e#16224#16292#0" expanded="false" />
+            <element signature="e#16339#16638#0" expanded="false" />
+            <element signature="e#16682#16811#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/friendship/contrib/suggestions/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/friendship/contrib/suggestions/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/friendship/contrib/suggestions/backends/persistance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/friendship/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+          <folding>
+            <element signature="e#1600#1712#0" expanded="false" />
+            <element signature="e#1600#1673#1" expanded="false" />
+            <element signature="e#1750#1942#0" expanded="false" />
+            <element signature="e#1750#1823#1" expanded="false" />
+            <element signature="e#2507#2651#0" expanded="false" />
+            <element signature="e#2684#2765#0" expanded="false" />
+            <element signature="e#2797#3691#0" expanded="false" />
+            <element signature="e#3738#4437#0" expanded="false" />
+            <element signature="e#4481#4688#0" expanded="false" />
+            <element signature="e#4721#4920#0" expanded="false" />
+            <element signature="e#4952#5032#0" expanded="false" />
+            <element signature="e#5069#5237#0" expanded="false" />
+            <element signature="e#5285#11670#0" expanded="false" />
+            <element signature="e#5350#5757#0" expanded="false" />
+            <element signature="e#5797#6170#0" expanded="false" />
+            <element signature="e#6215#6605#0" expanded="false" />
+            <element signature="e#6652#7111#0" expanded="false" />
+            <element signature="e#7163#7554#0" expanded="false" />
+            <element signature="e#7599#8045#0" expanded="false" />
+            <element signature="e#8094#8570#0" expanded="false" />
+            <element signature="e#8621#9102#0" expanded="false" />
+            <element signature="e#9158#9559#0" expanded="false" />
+            <element signature="e#9629#10167#0" expanded="false" />
+            <element signature="e#10226#10992#0" expanded="false" />
+            <element signature="e#11043#11670#0" expanded="false" />
+            <element signature="e#12054#12174#0" expanded="false" />
+            <element signature="e#12207#12283#0" expanded="false" />
+            <element signature="e#12330#12823#0" expanded="false" />
+            <element signature="e#12867#13102#0" expanded="false" />
+            <element signature="e#13149#15656#0" expanded="false" />
+            <element signature="e#13215#13538#0" expanded="false" />
+            <element signature="e#13579#13921#0" expanded="false" />
+            <element signature="e#13979#14597#0" expanded="false" />
+            <element signature="e#14658#15053#0" expanded="false" />
+            <element signature="e#15106#15656#0" expanded="false" />
+            <element signature="e#15720#16811#0" expanded="false" />
+            <element signature="e#16039#16191#0" expanded="false" />
+            <element signature="e#16224#16292#0" expanded="false" />
+            <element signature="e#16339#16638#0" expanded="false" />
+            <element signature="e#16682#16811#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/friendship/contrib/suggestions/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/friendship/.ropeproject/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3.4/site-packages/django/contrib/auth/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="411" column="6" selection-start-line="411" selection-start-column="6" selection-end-line="411" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/friendship/contrib/suggestions/managers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -852,7 +1058,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -860,7 +1065,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -868,9 +1072,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="91" column="23" selection-start-line="91" selection-start-column="23" selection-end-line="91" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -886,7 +1087,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -894,7 +1094,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="850" column="8" selection-start-line="850" selection-start-column="8" selection-end-line="850" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -919,20 +1118,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/friendship/contrib/suggestions/migrations/0001_initial.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/friendship/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="461" column="26" selection-start-line="461" selection-start-column="26" selection-end-line="461" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/lib/python3.4/site-packages/celery/task/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -947,13 +1132,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/friendship/.ropeproject/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.05970149">
-          <caret line="15" column="63" selection-start-line="15" selection-start-column="63" selection-end-line="15" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/friendship/.ropeproject/objectdb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -961,31 +1139,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/friendship/contrib/suggestions/tasks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/friendship/contrib/suggestions/backends/persistance.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/friendship/contrib/suggestions/backends/runners.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/friendship/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -996,41 +1154,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/friendship/contrib/suggestions/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/friendship/contrib/suggestions/managers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="72" selection-start-line="13" selection-start-column="72" selection-end-line="13" selection-end-column="72" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/friendship/contrib/suggestions/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/friendship/contrib/suggestions/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1038,7 +1165,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1046,7 +1172,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="850" column="8" selection-start-line="850" selection-start-column="8" selection-end-line="850" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1054,7 +1179,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="539" column="27" selection-start-line="539" selection-start-column="27" selection-end-line="539" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1078,7 +1202,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="464" column="8" selection-start-line="464" selection-start-column="8" selection-end-line="464" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1086,7 +1209,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1094,48 +1216,181 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="266" column="8" selection-start-line="266" selection-start-column="8" selection-end-line="266" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/friendship/contrib/suggestions/backends/importers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="73" column="22" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/friendship/contrib/suggestions/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/friendship/contrib/suggestions/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+          <caret line="11" column="124" selection-start-line="11" selection-start-column="124" selection-end-line="11" selection-end-column="124" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
+    <entry file="file://$PROJECT_DIR$/friendship/contrib/suggestions/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/friendship/contrib/suggestions/tasks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/friendship/contrib/suggestions/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5151515">
-          <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/friendship/contrib/suggestions/managers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/friendship/contrib/suggestions/backends/importers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="63" column="47" selection-start-line="63" selection-start-column="47" selection-end-line="63" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/friendship/contrib/suggestions/backends/persistance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/friendship/contrib/suggestions/backends/runners.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3.4/site-packages/django/contrib/auth/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="411" column="6" selection-start-line="411" selection-start-column="6" selection-end-line="411" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/friendship/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+          <folding>
+            <element signature="e#1600#1712#0" expanded="false" />
+            <element signature="e#1600#1673#1" expanded="false" />
+            <element signature="e#1750#1942#0" expanded="false" />
+            <element signature="e#1750#1823#1" expanded="false" />
+            <element signature="e#2507#2651#0" expanded="false" />
+            <element signature="e#2684#2765#0" expanded="false" />
+            <element signature="e#2797#3691#0" expanded="false" />
+            <element signature="e#3738#4437#0" expanded="false" />
+            <element signature="e#4481#4688#0" expanded="false" />
+            <element signature="e#4721#4920#0" expanded="false" />
+            <element signature="e#4952#5032#0" expanded="false" />
+            <element signature="e#5069#5237#0" expanded="false" />
+            <element signature="e#5285#11670#0" expanded="false" />
+            <element signature="e#5350#5757#0" expanded="false" />
+            <element signature="e#5797#6170#0" expanded="false" />
+            <element signature="e#6215#6605#0" expanded="false" />
+            <element signature="e#6652#7111#0" expanded="false" />
+            <element signature="e#7163#7554#0" expanded="false" />
+            <element signature="e#7599#8045#0" expanded="false" />
+            <element signature="e#8094#8570#0" expanded="false" />
+            <element signature="e#8621#9102#0" expanded="false" />
+            <element signature="e#9158#9559#0" expanded="false" />
+            <element signature="e#9629#10167#0" expanded="false" />
+            <element signature="e#10226#10992#0" expanded="false" />
+            <element signature="e#11043#11670#0" expanded="false" />
+            <element signature="e#12054#12174#0" expanded="false" />
+            <element signature="e#12207#12283#0" expanded="false" />
+            <element signature="e#12330#12823#0" expanded="false" />
+            <element signature="e#12867#13102#0" expanded="false" />
+            <element signature="e#13149#15656#0" expanded="false" />
+            <element signature="e#13215#13538#0" expanded="false" />
+            <element signature="e#13579#13921#0" expanded="false" />
+            <element signature="e#13979#14597#0" expanded="false" />
+            <element signature="e#14658#15053#0" expanded="false" />
+            <element signature="e#15106#15656#0" expanded="false" />
+            <element signature="e#15720#16811#0" expanded="false" />
+            <element signature="e#16039#16191#0" expanded="false" />
+            <element signature="e#16224#16292#0" expanded="false" />
+            <element signature="e#16339#16638#0" expanded="false" />
+            <element signature="e#16682#16811#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32107022">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tox.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/friendship/contrib/suggestions/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.07933884">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/friendship/.ropeproject/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="26" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.080267556">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/friendship/contrib/suggestions/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/friendship/contrib/suggestions/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.53511703">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
