@@ -1,4 +1,5 @@
-syntax: glob
+*.iml
+.idea
 build
 *.pyc
 *.sw[po]

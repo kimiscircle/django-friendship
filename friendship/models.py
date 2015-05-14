@@ -104,7 +104,6 @@ class FriendshipRequest(models.Model):
                 to_user=self.from_user
             )
 
-
         self.delete()
 
         # Delete any reverse requests
@@ -123,8 +122,8 @@ class FriendshipRequest(models.Model):
 
     def save(self, *args, **kwargs):
         if self.pk is None or self.pk == u'0':
-            send=True
-        super(FriendshipRequest,self).save(*args, **kwargs)
+            send = True
+        super(FriendshipRequest, self).save(*args, **kwargs)
         # Bust requests cache - request is deleted
         bust_cache('requests', self.to_user.pk)
         bust_cache('sent_requests', self.from_user.pk)
@@ -139,7 +138,7 @@ class FriendshipRequest(models.Model):
             friendship_request_created.send(sender=self)
 
     def delete(self, using=None):
-        super(FriendshipRequest,self).delete(using=using)
+        super(FriendshipRequest, self).delete(using=using)
         bust_cache('requests', self.to_user.pk)
         bust_cache('sent_requests', self.from_user.pk)
         friendship_request_canceled.send(sender=self)

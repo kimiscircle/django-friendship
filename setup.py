@@ -3,7 +3,6 @@ from setuptools import setup, find_packages
 
 from friendship import VERSION
 
-
 f = open(os.path.join(os.path.dirname(__file__), 'README.rst'))
 readme = f.read()
 f.close()
@@ -11,7 +10,7 @@ f.close()
 setup(
     name='django-friendship',
     version=".".join(map(str, VERSION)),
-    description='django-friendship provides an easy extensible interface for following and friendship',
+    description='django-friendship provides an easy extensible interface for following and friendship, and friendship suggestion management for the Django web framework',
     long_description=readme,
     author='Frank Wiles',
     author_email='frank@revsys.com',
