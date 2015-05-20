@@ -14,7 +14,7 @@ from friendship.signals import friendship_request_created, \
     friendship_request_rejected, friendship_request_canceled, \
     friendship_request_viewed, friendship_request_accepted, \
     friendship_removed, follower_created, following_created, follower_removed, \
-    following_removed, friendship_request_preaccepted
+    following_removed, friendship_request_preaccepted, friend_preadded, friend_preremoved
 
 AUTH_USER_MODEL = getattr(settings, 'AUTH_USER_MODEL', 'auth.User')
 
@@ -367,6 +367,7 @@ class Friend(models.Model):
         return "User #%d is friends with #%d" % (self.to_user_id, self.from_user_id)
 
     def save(self, *args, **kwargs):
+        friend_preadded.send(sender=self)
         # Ensure users can't be friends with themselves
         if self.to_user == self.from_user:
             raise ValidationError("Users cannot be friends with themselves.")
@@ -378,6 +379,7 @@ class Friend(models.Model):
         bust_cache('friends', self.from_user.pk)
 
     def delete(self, using=None):
+        friend_preremoved.send(sender=self)
         super(Friend, self).delete(using=using)
         # Bust requests cache - request is deleted
         # Bust friends cache - new friends added
